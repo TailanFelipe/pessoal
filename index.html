@@ -4,25 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Tailan Felipe · Portfólio</title>
-<meta name="description" content="Roteiro, edição de vídeo e conteúdo com IA para negócios do Agreste de Pernambuco.">
+<meta name="description" content="Roteiro e edição de vídeo para negócios de Lajedo e região, em Pernambuco.">
 <meta property="og:title" content="Tailan Felipe · Portfólio">
-<meta property="og:description" content="Roteiro, edição de vídeo e conteúdo com IA para negócios do Agreste de Pernambuco.">
+<meta property="og:description" content="Roteiro e edição de vídeo para negócios de Lajedo e região, em Pernambuco.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#141416">
+<meta name="theme-color" content="#F0E3C9">
 <script>if ("IntersectionObserver" in window) document.documentElement.classList.add("js");</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #141416;
-    --bg-2: #1a1a1d;
-    --bg-3: #202024;
-    --text: #F2F0EB;
-    --muted: rgba(242, 240, 235, .62);
-    --faint: rgba(242, 240, 235, .38);
-    --line: rgba(242, 240, 235, .12);
-    --accent: #D4A24C;
+    /* Paleta tirada da roupa (jaqueta caqui) e do brasão EDI JONES (creme, listras caqui, letras marrons, estrela vermelha) */
+    --bg: #F0E3C9;
+    --bg-2: #E4D6B6;
+    --bg-3: #D6C7A4;
+    --text: #372E21;
+    --muted: rgba(55, 46, 33, .72);
+    --faint: rgba(55, 46, 33, .56);
+    --line: rgba(55, 46, 33, .18);
+    --accent: #9B1C2A;
     --title: "Poppins", system-ui, sans-serif;
     --body: "Inter", system-ui, sans-serif;
     --gutter: clamp(20px, 5vw, 72px);
@@ -97,6 +98,7 @@
   .fact strong { display: block; font: 600 clamp(20px, 2.4vw, 28px)/1.15 var(--title); }
   .fact strong.fact-list { font-size: clamp(16px, 1.5vw, 18px); line-height: 1.4; letter-spacing: -0.005em; }
   .fact span { display: block; margin-top: 8px; font-size: 14px; color: var(--muted); }
+  .fact strong.fact-num { font: 700 clamp(56px, 7vw, 96px)/1 var(--title); letter-spacing: -0.04em; color: var(--accent); font-variant-numeric: tabular-nums; }
 
   /* Serviços */
   .services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(48px, 7vw, 88px); border-top: 1px solid var(--line); }
@@ -114,7 +116,8 @@
   }
   .work:last-child { border-bottom: 1px solid var(--line); }
   .work-num { font: 500 13px/1 var(--body); color: var(--accent); letter-spacing: .06em; }
-  .work h3 { margin-top: 20px; font-size: clamp(28px, 3.4vw, 40px); }
+  .work h3 { margin-top: 20px; font-size: clamp(28px, 3.4vw, 40px); overflow-wrap: anywhere; }
+  .work h3 a:hover { color: var(--accent); }
   .work-seg { margin-top: 12px; color: var(--muted); font-size: 15px; }
   .work-label { margin-top: 32px; font: 500 12px/1 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--faint); }
   .work-desc { margin-top: 12px; max-width: 42ch; }
@@ -245,6 +248,7 @@
     .about-text p + p { font-size: 11.5pt; }
     .facts { margin-top: 12mm; }
     .fact strong { font-size: 15pt; }
+    .fact strong.fact-num { font-size: 34pt; }
     .fact strong.fact-list { font-size: 10.5pt; }
     .fact span { font-size: 9pt; }
 
@@ -314,7 +318,7 @@
       <div class="cover-grid">
         <div>
           <h1 class="reveal">Tailan<span>Felipe</span></h1>
-          <p class="cover-line reveal" style="--d:.1s">Roteiro, edição de vídeo e conteúdo com IA para negócios do <em>Agreste de Pernambuco</em>.</p>
+          <p class="cover-line reveal" style="--d:.1s">Roteiro e edição de vídeo para negócios de <em>Lajedo e região</em>.</p>
           <div class="cover-actions reveal" style="--d:.2s">
             <a class="btn btn-accent wa-link" href="#contato">Pedir orçamento pelo WhatsApp</a>
             <a class="btn" href="#trabalhos">Ver trabalhos <span class="arrow">&darr;</span></a>
@@ -335,16 +339,16 @@
     <div class="wrap">
       <p class="eyebrow reveal"><b>01</b> Quem sou</p>
       <div class="about-grid">
-        <h2 class="reveal">Vídeo feito com IA e acabado à mão.</h2>
+        <h2 class="reveal">Conteúdo que faz seu perfil vender mais.</h2>
         <div class="about-text">
-          <p class="reveal">Sou produtor de conteúdo e editor de vídeo. Uno geração por inteligência artificial com acabamento editorial humano.</p>
+          <p class="reveal">Produtor de conteúdo e editor de vídeo com estratégia de tráfego pago para transformar visualização em cliente.</p>
           <p class="reveal">Atendo marcas do varejo, do mercado imobiliário, da moda e da gastronomia, do roteiro ao vídeo pronto para postar.</p>
         </div>
       </div>
       <div class="facts reveal">
-        <div class="fact"><strong>[número de vídeos entregues]</strong><span>vídeos entregues</span></div>
+        <div class="fact"><strong class="fact-num" data-conta="5">5M+</strong><span>de visualizações nas redes sociais</span></div>
         <div class="fact"><strong class="fact-list">IPEO, Due Fratelli, Xangai, RE/MAX Show e Lau iPhones</strong><span>alguns clientes atendidos</span></div>
-        <div class="fact"><strong>[cidade-base], PE</strong><span>atendimento presencial e remoto</span></div>
+        <div class="fact"><strong>Lajedo - PE e região</strong><span>atendimento presencial e remoto</span></div>
       </div>
     </div>
   </section>
@@ -357,8 +361,8 @@
       <div class="services">
         <article class="service reveal">
           <span class="n">01</span>
-          <h3>Roteiros para Reels e Stories</h3>
-          <p>Gancho, falas e indicação de cenas, escritos para o formato vertical e para o público de cada negócio.</p>
+          <h3>Produção de conteúdo</h3>
+          <p>Roteiro de Reels e Stories, direção da gravação, legendas de post e textos no tom de cada marca.</p>
         </article>
         <article class="service reveal" style="--d:.06s">
           <span class="n">02</span>
@@ -367,23 +371,23 @@
         </article>
         <article class="service reveal" style="--d:.12s">
           <span class="n">03</span>
-          <h3>Vídeos e imagens gerados com IA</h3>
-          <p>Cenas e imagens criadas em Google Veo/Flow, Kling, Hailuo, Runway e Higgsfield, finalizadas na edição.</p>
+          <h3>Tráfego pago</h3>
+          <p>Anúncios no Instagram e no Facebook para levar os vídeos a quem pode virar cliente, não só a quem assiste.</p>
         </article>
         <article class="service reveal">
           <span class="n">04</span>
-          <h3>Terreno em imóvel pronto com IA</h3>
-          <p>A partir da imagem do terreno, mostro o imóvel construído para anúncios de venda e lançamentos.</p>
+          <h3>Cenas e imagens de apoio</h3>
+          <p>Quando falta imagem, crio cenas com ferramentas de IA (Google Veo/Flow, Kling, Hailuo, Runway e Higgsfield) e finalizo na edição.</p>
         </article>
         <article class="service reveal" style="--d:.06s">
           <span class="n">05</span>
-          <h3>Motion graphics e animação de logotipo</h3>
-          <p>Logotipos animados, textos em movimento e peças de preço para vídeo.</p>
+          <h3>Terreno em imóvel pronto</h3>
+          <p>A partir da imagem do terreno, mostro o imóvel construído para anúncios de venda e lançamentos.</p>
         </article>
         <article class="service reveal" style="--d:.12s">
           <span class="n">06</span>
-          <h3>Legendas e textos para redes sociais</h3>
-          <p>Legendas de post, chamadas e textos de apoio escritos no tom de cada marca.</p>
+          <h3>Motion graphics e animação de logotipo</h3>
+          <p>Logotipos animados, textos em movimento e peças de preço para vídeo.</p>
         </article>
       </div>
     </div>
@@ -399,10 +403,10 @@
         <article class="work reveal">
           <div class="work-info">
             <span class="work-num">01</span>
-            <h3>RE/MAX Show</h3>
+            <h3><a href="https://instagram.com/remax.showlajedo" target="_blank" rel="noopener" aria-label="Instagram de RE/MAX Show">@remax.showlajedo</a></h3>
             <p class="work-seg">Imobiliária · Lajedo</p>
             <p class="work-label">O que eu fiz</p>
-            <p class="work-desc">Roteiros de locação, venda, financiamento, recrutamento de corretores e lançamento de loteamentos. Vídeos com IA de imóveis e animação do logotipo.</p>
+            <p class="work-desc">Roteiros de locação, venda, financiamento, recrutamento de corretores e lançamento de loteamentos. Vídeos de imóveis, com cenas de apoio feitas com IA, e animação do logotipo.</p>
           </div>
           <div class="work-media">
             <div class="frame"><video src="assets/re-max-show/01-kitnets-dom-joao-da-mata.mp4" poster="assets/re-max-show/01-kitnets-dom-joao-da-mata.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo para RE/MAX Show"></video><img class="poster-print" src="assets/re-max-show/01-kitnets-dom-joao-da-mata.jpg" alt=""></div>
@@ -412,7 +416,7 @@
         <article class="work reveal">
           <div class="work-info">
             <span class="work-num">02</span>
-            <h3>IPEO Caruaru</h3>
+            <h3><a href="https://instagram.com/ipeocaruaru" target="_blank" rel="noopener" aria-label="Instagram de IPEO Caruaru">@ipeocaruaru</a></h3>
             <p class="work-seg">Cursos e especializações em odontologia · Caruaru</p>
             <p class="work-label">O que eu fiz</p>
             <p class="work-desc">[descrever trabalho]</p>
@@ -425,10 +429,10 @@
         <article class="work reveal">
           <div class="work-info">
             <span class="work-num">03</span>
-            <h3>Restaurante Xangai</h3>
+            <h3><a href="https://instagram.com/xangailajedo" target="_blank" rel="noopener" aria-label="Instagram de Restaurante Xangai">@xangailajedo</a></h3>
             <p class="work-seg">Culinária japonesa e chinesa · Lajedo</p>
             <p class="work-label">O que eu fiz</p>
-            <p class="work-desc">Conteúdo de delivery e de produto, com legendas e imagens geradas por IA.</p>
+            <p class="work-desc">Conteúdo de delivery e de produto, com legendas e imagens de apoio.</p>
           </div>
           <div class="work-media">
             <div class="frame"><video src="assets/restaurante-xangai/01-cardapio-japones-e-chines.mp4" poster="assets/restaurante-xangai/01-cardapio-japones-e-chines.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo para Restaurante Xangai"></video><img class="poster-print" src="assets/restaurante-xangai/01-cardapio-japones-e-chines.jpg" alt=""></div>
@@ -438,7 +442,7 @@
         <article class="work reveal">
           <div class="work-info">
             <span class="work-num">04</span>
-            <h3>Lau iPhones</h3>
+            <h3><a href="https://instagram.com/lau_iphones" target="_blank" rel="noopener" aria-label="Instagram de Lau iPhones">@lau_iphones</a></h3>
             <p class="work-seg">Loja de iPhones · Lajedo</p>
             <p class="work-label">O que eu fiz</p>
             <p class="work-desc">Roteiros e vídeos publicitários, incluindo uma campanha de sorteio em parceria.</p>
@@ -450,7 +454,7 @@
         <article class="work reveal">
           <div class="work-info">
             <span class="work-num">05</span>
-            <h3>Due Fratelli</h3>
+            <h3><a href="https://instagram.com/duefratelligaranhuns" target="_blank" rel="noopener" aria-label="Instagram de Due Fratelli">@duefratelligaranhuns</a></h3>
             <p class="work-seg">Pizzaria · Garanhuns</p>
             <p class="work-label">O que eu fiz</p>
             <p class="work-desc">[descrever trabalho]</p>
@@ -462,7 +466,7 @@
         <article class="work reveal">
           <div class="work-info">
             <span class="work-num">06</span>
-            <h3>Fortplast</h3>
+            <h3><a href="https://instagram.com/fortplast.caruaru" target="_blank" rel="noopener" aria-label="Instagram de Fortplast">@fortplast.caruaru</a></h3>
             <p class="work-seg">Lonas e produtos para vaquejada · Caruaru</p>
             <p class="work-label">O que eu fiz</p>
             <p class="work-desc">[descrever trabalho]</p>
@@ -474,7 +478,7 @@
         <article class="work reveal">
           <div class="work-info">
             <span class="work-num">07</span>
-            <h3>Dom Royale</h3>
+            <h3><a href="https://instagram.com/usedomroyale" target="_blank" rel="noopener" aria-label="Instagram de Dom Royale">@usedomroyale</a></h3>
             <p class="work-seg">Moda no atacado</p>
             <p class="work-label">O que eu fiz</p>
             <p class="work-desc">Textos animados com estética editorial.</p>
@@ -498,18 +502,6 @@
         <article class="work reveal">
           <div class="work-info">
             <span class="work-num">09</span>
-            <h3>Faria Arreios</h3>
-            <p class="work-seg">[segmento]</p>
-            <p class="work-label">O que eu fiz</p>
-            <p class="work-desc">Edição de vídeos com imagens de banco de apoio e letterings.</p>
-          </div>
-          <div class="work-media">
-            <div class="frame frame-empty"><span>mídia em breve</span></div>
-          </div>
-        </article>
-        <article class="work reveal">
-          <div class="work-info">
-            <span class="work-num">10</span>
             <h3>Comercial Teixeira</h3>
             <p class="work-seg">Bombas d'água e equipamentos</p>
             <p class="work-label">O que eu fiz</p>
@@ -521,7 +513,7 @@
         </article>
         <article class="work reveal">
           <div class="work-info">
-            <span class="work-num">11</span>
+            <span class="work-num">10</span>
             <h3>Garanhuns Boliche Club</h3>
             <p class="work-seg">Boliche · Garanhuns</p>
             <p class="work-label">O que eu fiz</p>
@@ -533,11 +525,11 @@
         </article>
         <article class="work reveal">
           <div class="work-info">
-            <span class="work-num">12</span>
+            <span class="work-num">11</span>
             <h3>Blastfit</h3>
             <p class="work-seg">Moda fitness</p>
             <p class="work-label">O que eu fiz</p>
-            <p class="work-desc">Vídeos com IA em identidade própria: fundo escuro, verde neon e moldura dupla.</p>
+            <p class="work-desc">Vídeos em identidade própria: fundo escuro, verde neon e moldura dupla, com cenas criadas com apoio de IA.</p>
           </div>
           <div class="work-media">
             <div class="frame frame-empty"><span>mídia em breve</span></div>
@@ -556,7 +548,7 @@
       <div class="steps">
         <div class="step reveal"><span class="n">01</span><h3>Briefing</h3><p>Entendo o negócio, o público, a oferta e o prazo.</p></div>
         <div class="step reveal" style="--d:.06s"><span class="n">02</span><h3>Roteiro</h3><p>Escrevo o roteiro e envio para aprovação antes de produzir.</p></div>
-        <div class="step reveal" style="--d:.12s"><span class="n">03</span><h3>Produção</h3><p>Edito, gero as cenas com IA e monto o vídeo.</p></div>
+        <div class="step reveal" style="--d:.12s"><span class="n">03</span><h3>Produção</h3><p>Edito, monto o vídeo e crio as cenas de apoio que faltarem.</p></div>
         <div class="step reveal" style="--d:.18s"><span class="n">04</span><h3>Ajustes</h3><p>Faço as correções pedidas em até [número de rodadas] rodadas.</p></div>
         <div class="step reveal" style="--d:.24s"><span class="n">05</span><h3>Entrega</h3><p>Envio o arquivo final no formato de cada rede, pronto para postar.</p></div>
       </div>
@@ -594,11 +586,11 @@
           <div class="price"><small>por mês</small><strong>[R$ ___]</strong></div>
         </article>
         <article class="plan reveal" style="--d:.16s">
-          <h3>Vídeo com IA</h3>
+          <h3>Vídeo sem gravação</h3>
           <p class="for">Para mostrar o que ainda não foi filmado.</p>
           <ul>
             <li>Roteiro e direção das cenas</li>
-            <li>Cenas e imagens geradas com IA</li>
+            <li>Cenas e imagens criadas com apoio de IA</li>
             <li>Terreno em imóvel pronto ou produto em cena</li>
             <li>Animação de logotipo no fechamento</li>
             <li>Edição, legendas e finalização</li>
@@ -606,7 +598,7 @@
           <div class="price"><small>por vídeo</small><strong>[R$ ___]</strong></div>
         </article>
       </div>
-      <p class="plans-note reveal">Valores para o Agreste de Pernambuco. Projetos fora desses formatos são orçados à parte.</p>
+      <p class="plans-note reveal">Valores para Lajedo e região. Projetos fora desses formatos são orçados à parte.</p>
     </div>
   </section>
 
@@ -632,7 +624,7 @@
 <footer>
   <div class="wrap">
     <span>Tailan Felipe</span>
-    <span>Agreste de Pernambuco</span>
+    <span>Lajedo - PE e região</span>
   </div>
 </footer>
 
@@ -672,6 +664,27 @@
       });
     }, { rootMargin: "0px 0px -8% 0px" });
     document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+  })();
+
+  /* Contagem do número de destaque (0 até 5M+) quando entra na tela */
+  (function () {
+    var els = document.querySelectorAll("[data-conta]");
+    if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var fmt = function (v) { return (Math.round(v * 10) / 10).toString().replace(".", ",") + "M+"; };
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        io.unobserve(e.target);
+        var el = e.target, alvo = parseFloat(el.dataset.conta), t0 = performance.now(), dur = 1600;
+        (function passo(agora) {
+          var p = Math.min(1, (agora - t0) / dur);
+          el.textContent = p < 1 ? fmt(alvo * (1 - Math.pow(1 - p, 3))) : alvo + "M+";
+          if (p < 1) requestAnimationFrame(passo);
+        })(t0);
+      });
+    }, { threshold: 0.6 });
+    els.forEach(function (el) { io.observe(el); });
+    addEventListener("beforeprint", function () { els.forEach(function (el) { el.textContent = el.dataset.conta + "M+"; }); });
   })();
 
   /* Vídeos: mudos em loop, tocam só quando visíveis; controles ao tocar */

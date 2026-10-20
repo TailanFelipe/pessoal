@@ -17,31 +17,30 @@ const VIDEO = new Set([".mp4", ".mov"]);
 const IMAGEM = new Set([".jpg", ".jpeg", ".png", ".webp"]);
 
 // Ordem e textos dos clientes. O nome da subpasta é casado pelas chaves.
+// insta: @ do Instagram (sem o @). Quando existe, o título do card vira o @ com link; sem ele, fica o nome.
 const CLIENTES = [
-  { chaves: ["remax"], nome: "RE/MAX Show", segmento: "Imobiliária · Lajedo",
-    fiz: "Roteiros de locação, venda, financiamento, recrutamento de corretores e lançamento de loteamentos. Vídeos com IA de imóveis e animação do logotipo." },
-  { chaves: ["ipeo"], nome: "IPEO Caruaru", segmento: "Cursos e especializações em odontologia · Caruaru",
+  { insta: "remax.showlajedo", chaves: ["remax"], nome: "RE/MAX Show", segmento: "Imobiliária · Lajedo",
+    fiz: "Roteiros de locação, venda, financiamento, recrutamento de corretores e lançamento de loteamentos. Vídeos de imóveis, com cenas de apoio feitas com IA, e animação do logotipo." },
+  { insta: "ipeocaruaru", chaves: ["ipeo"], nome: "IPEO Caruaru", segmento: "Cursos e especializações em odontologia · Caruaru",
     fiz: "[descrever trabalho]" },
-  { chaves: ["xangai"], nome: "Restaurante Xangai", segmento: "Culinária japonesa e chinesa · Lajedo",
-    fiz: "Conteúdo de delivery e de produto, com legendas e imagens geradas por IA." },
-  { chaves: ["laudoiphone", "lauiphone", "lau"], nome: "Lau iPhones", segmento: "Loja de iPhones · Lajedo",
+  { insta: "xangailajedo", chaves: ["xangai"], nome: "Restaurante Xangai", segmento: "Culinária japonesa e chinesa · Lajedo",
+    fiz: "Conteúdo de delivery e de produto, com legendas e imagens de apoio." },
+  { insta: "lau_iphones", chaves: ["laudoiphone", "lauiphone", "lau"], nome: "Lau iPhones", segmento: "Loja de iPhones · Lajedo",
     fiz: "Roteiros e vídeos publicitários, incluindo uma campanha de sorteio em parceria." },
-  { chaves: ["duefratelli", "fratelli"], nome: "Due Fratelli", segmento: "Pizzaria · Garanhuns",
+  { insta: "duefratelligaranhuns", chaves: ["duefratelli", "fratelli"], nome: "Due Fratelli", segmento: "Pizzaria · Garanhuns",
     fiz: "[descrever trabalho]" },
-  { chaves: ["fortplast"], nome: "Fortplast", segmento: "Lonas e produtos para vaquejada · Caruaru",
+  { insta: "fortplast.caruaru", chaves: ["fortplast"], nome: "Fortplast", segmento: "Lonas e produtos para vaquejada · Caruaru",
     fiz: "[descrever trabalho]" },
-  { chaves: ["domroyale", "royale"], nome: "Dom Royale", segmento: "Moda no atacado",
+  { insta: "usedomroyale", chaves: ["domroyale", "royale"], nome: "Dom Royale", segmento: "Moda no atacado",
     fiz: "Textos animados com estética editorial." },
   { chaves: ["smugs"], nome: "Smugs", segmento: "Moda feminina plus size no atacado · Caruaru e Moda Center",
     fiz: "Roteiros e vídeos publicitários verticais." },
-  { chaves: ["faria"], nome: "Faria Arreios", segmento: "[segmento]",
-    fiz: "Edição de vídeos com imagens de banco de apoio e letterings." },
   { chaves: ["teixeira"], nome: "Comercial Teixeira", segmento: "Bombas d'água e equipamentos",
     fiz: "Edição de vídeos de vendedor com legendas e letterings de oferta." },
   { chaves: ["boliche"], nome: "Garanhuns Boliche Club", segmento: "Boliche · Garanhuns",
     fiz: "Motion graphics, animação do logotipo e peças de preço." },
   { chaves: ["blastfit"], nome: "Blastfit", segmento: "Moda fitness",
-    fiz: "Vídeos com IA em identidade própria: fundo escuro, verde neon e moldura dupla." },
+    fiz: "Vídeos em identidade própria: fundo escuro, verde neon e moldura dupla, com cenas criadas com apoio de IA." },
 ];
 
 const normaliza = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -134,7 +133,7 @@ const htmlCards = cards.map(({ info, midias }, i) => {
   return `        <article class="work reveal">
           <div class="work-info">
             <span class="work-num">${String(i + 1).padStart(2, "0")}</span>
-            <h3>${esc(info.nome)}</h3>
+            <h3>${info.insta ? `<a href="https://instagram.com/${esc(info.insta)}" target="_blank" rel="noopener" aria-label="Instagram de ${esc(info.nome)}">@${esc(info.insta)}</a>` : esc(info.nome)}</h3>
             <p class="work-seg">${esc(info.segmento)}</p>
             <p class="work-label">O que eu fiz</p>
             <p class="work-desc">${esc(info.fiz)}</p>
