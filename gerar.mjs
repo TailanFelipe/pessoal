@@ -22,7 +22,7 @@ const CLIENTES = [
   { insta: "remax.showlajedo", chaves: ["remax"], nome: "RE/MAX Show", segmento: "Imobiliária · Lajedo",
     fiz: "Roteiros de locação, venda, financiamento, recrutamento de corretores e lançamento de loteamentos. Vídeos de imóveis, com cenas de apoio feitas com IA, e animação do logotipo." },
   { insta: "ipeocaruaru", chaves: ["ipeo"], nome: "IPEO Caruaru", segmento: "Cursos e especializações em odontologia · Caruaru",
-    fiz: "[descrever trabalho]" },
+    fiz: "Vídeos de divulgação das especializações e aperfeiçoamentos, presenciais e on-line." },
   { insta: "xangailajedo", chaves: ["xangai"], nome: "Restaurante Xangai", segmento: "Culinária japonesa e chinesa · Lajedo",
     fiz: "Conteúdo de delivery e de produto, com legendas e imagens de apoio." },
   { insta: "lau_iphones", chaves: ["laudoiphone", "lauiphone", "lau"], nome: "Lau iPhones", segmento: "Loja de iPhones · Lajedo",
@@ -147,8 +147,17 @@ const htmlCards = cards.map(({ info, midias }, i) => {
 }).join("\n");
 
 // 2. Foto da capa
+// Sem foto.jpg, a capa mostra o cartão do perfil do Instagram com a foto de perfil (midia/perfil.jpg).
 const fotoOrigem = path.join(MIDIA, "foto.jpg");
+const perfilOrigem = path.join(MIDIA, "perfil.jpg");
 let htmlFoto = `          <div class="photo"></div>`;
+if (fs.existsSync(perfilOrigem)) {
+  fs.copyFileSync(perfilOrigem, path.join(ASSETS, "perfil.jpg"));
+  htmlFoto = `          <a class="ig-card" href="https://instagram.com/tailan_felipe_" target="_blank" rel="noopener">
+            <span class="ig-avatar"><img src="assets/perfil.jpg" alt="Tailan Felipe"></span>
+            <span><b>@tailan_felipe_</b><small>Produtor de conteúdo e editor de vídeo</small><span class="ig-ver">Ver meu Instagram</span></span>
+          </a>`;
+}
 if (fs.existsSync(fotoOrigem)) {
   fs.copyFileSync(fotoOrigem, path.join(ASSETS, "foto.jpg"));
   htmlFoto = `          <div class="photo"><img src="assets/foto.jpg" alt="Tailan"></div>`;
